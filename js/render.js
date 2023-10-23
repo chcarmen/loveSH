@@ -49,7 +49,7 @@ function render() {
 			ctx.globalAlpha = (MainHex.ct)/50;
 		}
 
-		renderBeginningText();
+		//renderBeginningText();
 		ctx.globalAlpha = 1;
 	}
 
@@ -86,7 +86,7 @@ function renderBeginningText() {
 	renderText((trueCanvas.width)/2 + 2 * settings.scale,upperheight-0*settings.scale, fontSize, '#2c3e50', input_text);
 	renderText((trueCanvas.width)/2 + 2 * settings.scale,upperheight+33*settings.scale, fontSize, '#2c3e50', action_text);
     if (!mob) {
-	    drawKey("",(trueCanvas.width)/2 + 2 * settings.scale-2.5,upperheight+38*settings.scale);
+	   drawKey("",(trueCanvas.width)/2 + 2 * settings.scale-2.5,upperheight+38*settings.scale);
     }
 
 	renderText((trueCanvas.width)/2 + 2 * settings.scale,lowerheight,fontSize, '#2c3e50', score_text);

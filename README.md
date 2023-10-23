@@ -1,4 +1,4 @@
-Hextris
+LoveSH
 ==========
 
 <img src="images/twitter-opengraph.png" width="100px"><br>
@@ -12,7 +12,7 @@ By:
  - Michael Yang ([@themichaelyang](http://github.com/themichaelyang))
  
  ## Citation
-Did you use Hextris in your research? Cite us as follows:
+Did you use LoveSH in your research? Cite us as follows:
 ```
   @misc{engstrom2015hextris,
     author = {Logan Engstrom, Garrett Finucane, Noah Moroze, Michael Yang},
@@ -28,7 +28,7 @@ Did you use Hextris in your research? Cite us as follows:
 This project is not very actively maintained, as we are all very busy these days. But feel free to open an issue or PR, and we'll eventually take a look.
 
 # About
-Hextris was created by a group of high school friends in 2014.
+LoveSH was created by a group of high school friends in 2014.
 
 ## Press kit
 http://hextris.github.io/presskit/info.html
