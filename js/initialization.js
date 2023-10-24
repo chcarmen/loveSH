@@ -29,7 +29,6 @@ function initialize(a) {
 
 	window.hexagonBackgroundColor = 'rgb(236, 240, 241)';
 	window.hexagonBackgroundColorClear = 'rgba(236, 240, 241, 0.5)';
-	window.centerBlue = 'rgb(255,0,0)';
 	window.angularVelocityConst = 4;
 	window.scoreOpacity = 0;
 	window.textOpacity = 0;
