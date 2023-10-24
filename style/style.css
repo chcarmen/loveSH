@@ -400,7 +400,7 @@ body {
 	padding:0;
 	bottom:15px;
 	position:absolute;
-	left:calc(50% - 124px);
+    left:50%;
 	transform:translate(-50%, 0%);
 	-webkit-transform:translate(-50%, 0%);
 	-moz-transform:translate(-50%, 0%);
@@ -446,18 +446,18 @@ body {
 @font-face {
 	font-family:FangYuan;
 	font-weight:light;
-	src:url("./fonts/AlimamaFangYuanTiVF-Thin.ttf") format("TrueType");
+	src:url("../assets/fonts/AlimamaFangYuanTiVF-Thin.ttf") format("TrueType");
 }
 
 @font-face {
 	font-family:FangYuan;
-	src:url("./fonts/AlimamaFangYuanTiVF-Thin.ttf") format("TrueType");
+	src:url("../assets/fonts/AlimamaFangYuanTiVF-Thin.ttf") format("TrueType");
 }
 
 @font-face {
 	font-family:FangYuan;
 	font-weight:bold;
-	src:url("./fonts/AlimamaFangYuanTiVF-Thin.ttf") format("TrueType");
+	src:url("../assets/fonts/AlimamaFangYuanTiVF-Thin.ttf") format("TrueType");
 }
 
 .GOTitle {
