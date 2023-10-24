@@ -60,6 +60,26 @@ function clearGameBoard() {
 	drawPolygon(trueCanvas.width / 2, trueCanvas.height / 2, 6, trueCanvas.width / 2, 30, hexagonBackgroundColor, 0, 'rgba(0,0,0,0)');
 }
 
+function create5star(sx, sy, radius, color, rotato){   
+	ctx.save();   
+	ctx.fillStyle = color;   
+	ctx.translate(sx, sy);//移动坐标原点   
+	ctx.rotate(Math.PI + rotato);//旋转   
+	ctx.beginPath();//创建路径   
+	var x = Math.sin(0);   
+	var y = Math.cos(0);   
+	var dig = Math.PI / 5 * 4;   
+	for (var i = 0; i < 5; i++) {//画五角星的五条边   
+		var x = Math.sin(i * dig);   
+		var y = Math.cos(i * dig);   
+		ctx.lineTo(x * radius, y * radius);   
+	}   
+	ctx.closePath();   
+	ctx.stroke();   
+	ctx.fill();   
+	ctx.restore(); 
+}   
+
 function drawPolygon(x, y, sides, radius, theta, fillColor, lineWidth, lineColor) {
 	ctx.fillStyle = fillColor;
 	ctx.lineWidth = lineWidth;
@@ -81,6 +101,12 @@ function drawPolygon(x, y, sides, radius, theta, fillColor, lineWidth, lineColor
 	ctx.fill();
 	ctx.stroke();
 	ctx.strokeStyle = 'rgba(0,0,0,0)';
+    
+    create5star(x-50, y-50, 20, "#ff0", 0);
+    create5star(x-30, y-30, 10, "#ff0", -Math.PI / 5 * 2);
+    create5star(x-40, y-20, 10, "#ff0", -Math.PI / 5 * 3);
+    create5star(x-20, y-40, 10, "#ff0", -Math.PI / 5 * 4);
+    create5star(x-50, y-10, 10, "#ff0", -Math.PI / 5 * 5);
 }
 
 function toggleClass(element, active) {
