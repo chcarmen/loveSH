@@ -5,7 +5,7 @@ function initialize(a) {
 	window.rush = 1;
 	window.lastTime = Date.now();
 	window.iframHasLoaded = false;
-	window.colors = ["#e74c3c", "#f1c40f", "#3498db", "#2ecc71"];
+	window.colors = ["东", "方", "明", "珠", "人", "民", "广", "场"];
 	window.hexColorsToTintedColors = {
 		"#e74c3c": "rgb(241,163,155)",
 		"#f1c40f": "rgb(246,223,133)",

@@ -123,14 +123,14 @@ function Block(fallingLane, color, iter, distFromHex, settled) {
 			ctx.fillStyle = "#FFF";
 		} else if (gameState === 0) {
 			if (this.color.charAt(0) == 'r') {
-				ctx.fillStyle = rgbColorsToTintedColors[this.color];
+				//ctx.fillStyle = rgbColorsToTintedColors[this.color];
 			}
 			else {
-				ctx.fillStyle = hexColorsToTintedColors[this.color];
+				//ctx.fillStyle = hexColorsToTintedColors[this.color];
 			}
 		}
 		else {
-			ctx.fillStyle = this.color;
+			ctx.fillStyle = "#00FF00"; //this.color;
 		}
 
 		ctx.globalAlpha = this.opacity;
@@ -143,7 +143,7 @@ function Block(fallingLane, color, iter, distFromHex, settled) {
 		ctx.font = "bold 30px Arial";
 		ctx.fillStyle = "#000"
 		ctx.textAlign = "center";
-		ctx.fillText("东", baseX, baseY+this.height / 4);
+		ctx.fillText(this.color, baseX, baseY+this.height / 4);
 
 		ctx.globalAlpha = 1;
 	};
