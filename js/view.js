@@ -101,12 +101,7 @@ function drawPolygon(x, y, sides, radius, theta, fillColor, lineWidth, lineColor
 	ctx.fill();
 	ctx.stroke();
 	ctx.strokeStyle = 'rgba(0,0,0,0)';
-    
-    create5star(x-50, y-50, 20, "#ff0", 0);
-    create5star(x-30, y-30, 10, "#ff0", -Math.PI / 5 * 2);
-    create5star(x-40, y-20, 10, "#ff0", -Math.PI / 5 * 3);
-    create5star(x-20, y-40, 10, "#ff0", -Math.PI / 5 * 4);
-    create5star(x-50, y-10, 10, "#ff0", -Math.PI / 5 * 5);
+
 }
 
 function toggleClass(element, active) {

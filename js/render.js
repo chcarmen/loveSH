@@ -28,6 +28,27 @@ function render() {
 	}
 
 	MainHex.draw();
+	
+	height = 2 * MainHex.sideLength;
+	var maxR = 0.15, minR = 0.05;//大五角星的半径，小五角星的半径
+	var maxX = 0.25, maxY = 0.25;//大五星的位置   
+	// 小五角星的位置
+	var minX = [0.50, 0.60, 0.60, 0.50]; 
+	var minY = [0.10, 0.20, 0.35, 0.45];   
+	// 画大 ☆   
+	var ox = height * maxX, oy = height * maxY;
+	var base_x = trueCanvas.width / 2 - MainHex.sideLength / 4 * 3;
+	var base_y = trueCanvas.height / 2 - MainHex.sideLength / 4 * 3;
+	create5star(base_x + ox, base_y + oy, height * maxR, "#ff0", 0);//绘制五角星   
+	
+	// 画小 ★   
+	for (var idx = 0; idx < 4; idx++) {   
+		var sx = minX[idx] * height, sy = minY[idx] * height;  
+		// 计算大五角星圆心和小五角星圆心连线的斜率（也就是画布旋转的弧度值）
+		var theta = Math.atan((oy - sy) / (ox - sx));   
+		create5star(base_x + sx, base_y + sy, height * minR, "#ff0", -Math.PI / 2 + theta);   
+	}
+
 	if (gameState ==1 || gameState ==-1 || gameState === 0) {
 		drawScoreboard();
 	}
