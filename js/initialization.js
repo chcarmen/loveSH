@@ -34,6 +34,7 @@ function initialize(a) {
 	window.textOpacity = 0;
 	window.prevGameState = undefined;
 	window.op = 0;
+	clearSaveState();
 	window.saveState = localStorage.getItem("saveState") || "{}";
 	if (saveState !== "{}") {
 		op = 1;
