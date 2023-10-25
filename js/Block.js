@@ -136,40 +136,10 @@ function Block(fallingLane, color, iter, distFromHex, settled) {
 		ctx.globalAlpha = this.opacity;
 		var baseX = trueCanvas.width / 2 + Math.sin((this.angle) * (Math.PI / 180)) * (this.distFromHex + this.height / 2) + gdx;
 		var baseY = trueCanvas.height / 2 - Math.cos((this.angle) * (Math.PI / 180)) * (this.distFromHex + this.height / 2) + gdy;
+
 		ctx.beginPath();
-		ctx.moveTo(baseX + p1.x, baseY + p1.y);
-		ctx.lineTo(baseX + p2.x, baseY + p2.y);
-		ctx.lineTo(baseX + p3.x, baseY + p3.y);
-		ctx.lineTo(baseX + p4.x, baseY + p4.y);
-		//ctx.lineTo(baseX + p1.x, baseY + p1.y);
-		ctx.closePath();
+		ctx.arc(baseX, baseY, this.height / 2, 0, 2 * Math.PI);
 		ctx.fill();
-
-		if (this.tint) {
-			if (this.opacity < 1) {
-				if (gameState == 1 || gameState==0) {
-					localStorage.setItem("saveState", exportSaveState());
-				}
-
-				this.iter = 2.25;
-				this.tint = 0;
-			}
-
-			ctx.fillStyle = "#FFF";
-			ctx.globalAlpha = this.tint;
-			ctx.beginPath();
-			ctx.moveTo(baseX + p1.x, baseY + p1.y);
-			ctx.lineTo(baseX + p2.x, baseY + p2.y);
-			ctx.lineTo(baseX + p3.x, baseY + p3.y);
-			ctx.lineTo(baseX + p4.x, baseY + p4.y);
-			ctx.lineTo(baseX + p1.x, baseY + p1.y);
-			ctx.closePath();
-			ctx.fill();
-			this.tint -= 0.02 * MainHex.dt;
-			if (this.tint < 0) {
-				this.tint = 0;
-			}
-		}
 
 		ctx.globalAlpha = 1;
 	};
