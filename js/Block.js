@@ -140,6 +140,10 @@ function Block(fallingLane, color, iter, distFromHex, settled) {
 		ctx.beginPath();
 		ctx.arc(baseX, baseY, this.height / 2, 0, 2 * Math.PI);
 		ctx.fill();
+		ctx.font = "bold 30px Arial";
+		ctx.fillStyle = "#000"
+		ctx.textAlign = "center";
+		ctx.fillText("东", baseX, baseY+this.height / 4);
 
 		ctx.globalAlpha = 1;
 	};
