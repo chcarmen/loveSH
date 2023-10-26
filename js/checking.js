@@ -42,13 +42,33 @@ function consolidateBlocks(hex,side,index){
 	var sidesChanged =[];
 	var deleting=[];
 	var deletedBlocks = [];
-	var i;
+	var i, j, k;
 	for (i=0; i<hex.blocks[side].length; i++) {
 		if (i != index && hex.blocks[side][i].color == hex.blocks[side][index].color) {
-			console.log("deleting.push "+side+i);
 			deleting.push([side, i]);
 		}
 	}
+
+	comb_found = false;
+	for (i=0; i<combinations.length; i++) {
+		if (hex.blocks[side].length < combinations[i].length) continue;
+		for (j=0; j<combinations[i].length; j++) {
+			var found = -1;
+			for (k=0; k<hex.blocks[side].length; k++) {
+				if (combinations[i][j] == hex.blocks[side][k].color) found = k;
+			}
+			if (found < 0) break;
+		}
+		if (j == combinations[i].length) {
+			for (k=0; k<hex.blocks[side].length; k++) {
+				if (combinations[i].indexOf(hex.blocks[side][k].color) != -1) {
+					deleting.push([side, k]);
+				}
+			}
+			break;
+		}
+	}
+
 	if(deleting.length<1){return;}
 
 	for(i=0; i<deleting.length;i++) {
