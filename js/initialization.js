@@ -5,7 +5,7 @@ function initialize(a) {
 	window.rush = 1;
 	window.lastTime = Date.now();
 	window.iframHasLoaded = false;
-	window.combinations = [["东", "方", "明", "珠"], ["人", "民", "广", "场"]];
+	window.combinations = [["东", "方", "明", "珠"], ["人", "民", "广", "场"], ["南", "京", "路"], ["黄", "埔", "江"], ["豫", "园"], ["外", "滩"]];
 	window.colors = [];
 	var i, j;
 	for (i=0; i<combinations.length; i++) {
