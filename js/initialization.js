@@ -5,7 +5,14 @@ function initialize(a) {
 	window.rush = 1;
 	window.lastTime = Date.now();
 	window.iframHasLoaded = false;
-	window.colors = ["东", "方", "明", "珠", "人", "民", "广", "场"];
+	window.combinations = [["东", "方", "明", "珠"], ["人", "民", "广", "场"]];
+	window.colors = [];
+	var i, j;
+	for (i=0; i<combinations.length; i++) {
+		for (j=0; j<combinations[i].length; j++) {
+			colors.push(combinations[i][j]);
+		}
+	}
 	window.hexColorsToTintedColors = {
 		"#e74c3c": "rgb(241,163,155)",
 		"#f1c40f": "rgb(246,223,133)",
