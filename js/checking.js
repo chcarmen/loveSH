@@ -42,13 +42,15 @@ function consolidateBlocks(hex,side,index){
 	var sidesChanged =[];
 	var deleting=[];
 	var deletedBlocks = [];
-	//add start case
-	deleting.push([side,index]);
-	//fill deleting	
-	floodFill(hex,side,index,deleting);
-	//make sure there are more than 3 blocks to be deleted
-	if(deleting.length<3){return;}
 	var i;
+	for (i=0; i<hex.blocks[side].length; i++) {
+		if (i != index && hex.blocks[side][i].color == hex.blocks[side][index].color) {
+			console.log("deleting.push "+side+i);
+			deleting.push([side, i]);
+		}
+	}
+	if(deleting.length<1){return;}
+
 	for(i=0; i<deleting.length;i++) {
 		var arr = deleting[i];
 		//just making sure the arrays are as they should be
