@@ -41,26 +41,26 @@ function waveGen(hex) {
 			this.lastGen = this.dt;
 			var fv = randInt(0, MainHex.sides);
 			addNewBlock(fv, colors[randInt(0, colors.length)], 1.6 + (this.difficulty / 15) * 3);
-			var lim = 5;
-			if (this.ct > lim) {
-				var nextPattern = randInt(0, 3 + 21);
-				if (nextPattern > 15) {
-					this.ct = 0;
-					this.currentFunction = this.doubleGeneration;
-				} else if (nextPattern > 10) {
-					this.ct = 0;
-					this.currentFunction = this.crosswiseGeneration;
-				} else if (nextPattern > 7) {
-					this.ct = 0;
-					this.currentFunction = this.spiralGeneration;
-				} else if (nextPattern > 4) {
-					this.ct = 0;
-					this.currentFunction = this.circleGeneration;
-				} else if (nextPattern > 1) {
-					this.ct = 0;
-					this.currentFunction = this.halfCircleGeneration;
-				}
-			}
+			//var lim = 5;
+			//if (this.ct > lim) {
+			//	var nextPattern = randInt(0, 3 + 21);
+			//	if (nextPattern > 15) {
+			//		this.ct = 0;
+			//		this.currentFunction = this.doubleGeneration;
+			//	} else if (nextPattern > 10) {
+			//		this.ct = 0;
+			//		this.currentFunction = this.crosswiseGeneration;
+			//	} else if (nextPattern > 7) {
+			//		this.ct = 0;
+			//		this.currentFunction = this.spiralGeneration;
+			//	} else if (nextPattern > 4) {
+			//		this.ct = 0;
+			//		this.currentFunction = this.circleGeneration;
+			//	} else if (nextPattern > 1) {
+			//		this.ct = 0;
+			//		this.currentFunction = this.halfCircleGeneration;
+			//	}
+			//}
 		}
 	};
 
