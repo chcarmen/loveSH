@@ -227,7 +227,7 @@ function setStartScreen() {
 	requestAnimFrame(animLoop);
 }
 
-var spd = 1;
+var spd = 0.8;
 
 function animLoop() {
 	switch (gameState) {
@@ -236,9 +236,7 @@ function animLoop() {
 		render();
 		var now = Date.now();
 		var dt = (now - lastTime)/16.666 * rush;
-		if (spd > 1) {
-			dt *= spd;
-		}
+		dt *= spd;
 
 		if(gameState == 1 ){
 			if(!MainHex.delay) {
