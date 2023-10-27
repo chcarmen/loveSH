@@ -227,7 +227,7 @@ function setStartScreen() {
 	requestAnimFrame(animLoop);
 }
 
-var spd = 0.8;
+var spd = 0.6;
 
 function animLoop() {
 	switch (gameState) {

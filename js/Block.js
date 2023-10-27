@@ -130,7 +130,7 @@ function Block(fallingLane, color, iter, distFromHex, settled) {
 			}
 		}
 		else {
-			ctx.fillStyle = "#00FF00"; //this.color;
+			ctx.fillStyle = "#F4ECF7 "; //this.color;
 		}
 
 		ctx.globalAlpha = this.opacity;
