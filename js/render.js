@@ -84,6 +84,22 @@ function render() {
 	settings.prevScale = settings.scale;
 	settings.hexWidth = settings.baseHexWidth * settings.scale;
 	settings.blockHeight = settings.baseBlockHeight * settings.scale;
+
+    var tips = '<h3>上海地标</h3>\
+                <hr></hr>\
+                <br></br>\
+                <p>东方明珠</p>\
+                <p>人民广场</p>\
+                <p>九亭五小</p>\
+                <p>南京路</p>\
+                <p>黄浦江</p>\
+                <p>徐家汇</p>\
+                <p>朱家角</p>\
+                <p>豫园</p>\
+                <p>外滩</p>\
+                <p>松江</p>';
+
+    $("#tips").html(tips);
 }
 
 function renderBeginningText() {

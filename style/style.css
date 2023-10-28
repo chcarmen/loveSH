@@ -525,3 +525,17 @@ body {
 	-moz-transform:translate(-50%, 0%);
 	-ms-transform:translate(-50%, 0%);
 }
+
+#tips {
+	position:fixed;
+	bottom:20%;
+	width:180px;
+	overflow:visible;
+	margin-left:20px;
+	font-family:FangYuan;
+    font-size:30.5000px;
+	font-weight:light;
+	margin-bottom:5px;
+	margin-top:-10px;
+    color: #650303;
+}
