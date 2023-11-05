@@ -6,12 +6,15 @@ function render() {
 	
 	ctx.clearRect(0, 0, trueCanvas.width, trueCanvas.height);
 	clearGameBoard();
+
+	var img = document.getElementById("showPlace");
+	ctx.drawImage(img, 0, 0, 4928, 3264, 0, 0, trueCanvas.width, trueCanvas.height);
 	if (gameState === 1 || gameState === 2 || gameState === -1 || gameState === 0) {
 		if (op < 1) {
 			op += 0.01;
 		}
 		ctx.globalAlpha = op;
-		drawPolygon(trueCanvas.width / 2 , trueCanvas.height / 2 , 6, (settings.rows * settings.blockHeight) * (2/Math.sqrt(3)) + settings.hexWidth, 30, grey, false,6);
+		drawPolygon(trueCanvas.width / 2 , trueCanvas.height / 2 , 6, (settings.rows * settings.blockHeight) * (2/Math.sqrt(3)) + settings.hexWidth, 30, "rgb(255, 255, 255, 0.2)", 4, '#ffffff');
 		drawTimer();
 		ctx.globalAlpha = 1;
 	}
