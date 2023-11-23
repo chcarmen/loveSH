@@ -89,6 +89,13 @@ function hideUIElements() {
 
 function init(b) {
 	if(settings.ending_block && b == 1){return;}
+
+    const bgMusic = document.getElementById("bgm");
+    if (bgMusic.paused) {
+        bgMusic.play();
+        bgMusic.paused = false;
+    }
+
 	if (b) {
 		$("#pauseBtn").attr('src',"./assets/images/btn_pause.svg");
 		if ($('#helpScreen').is(":visible")) {
@@ -341,6 +348,16 @@ function checkGameOver() {
 			}
 			writeHighScores();
 			gameOverDisplay();
+
+            const gameOver = document.getElementById("gameOver");
+            gameOver.play();
+
+            const bgMusic = document.getElementById("bgm");
+            if (!bgMusic.paused) {
+                bgMusic.pause();
+                bgMusic.paused = true;
+            }
+
 			return true;
 		}
 	}
