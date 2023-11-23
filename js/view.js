@@ -193,6 +193,15 @@ function pause(o) {
         return;
     }
 
+    const bgMusic = document.getElementById("bgm");
+    if (bgMusic.paused) {
+        bgMusic.play();
+        bgMusic.paused = false;
+    } else {
+        bgMusic.pause();
+        bgMusic.paused = true;
+    }
+
 	pausable = false;
 	writeHighScores();
 	var message;
