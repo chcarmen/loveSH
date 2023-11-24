@@ -72,8 +72,8 @@ function consolidateBlocks(hex,side,index){
 			var captionText = document.getElementById("caption");
 
 			modal.style.display = "block";
-			modalImg.src = "./assets/images/img.jpg";
-			captionText.innerHTML = "松江";
+			modalImg.src = siteimg[i];
+			captionText.innerHTML = siteimg[i];
 			break;
 		}
 	}
