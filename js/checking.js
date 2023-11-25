@@ -37,6 +37,15 @@ function floodFill(hex, side, index, deleting) {
 	}
 }
 
+function get_str_from_comb(comb)
+{
+	var str = comb[0];
+	for (i=1; i<comb.length; i++) {
+		str += comb[i];
+	}
+	return str;
+}
+
 function consolidateBlocks(hex,side,index){
 	//record which sides have been changed
 	var sidesChanged =[];
@@ -65,6 +74,9 @@ function consolidateBlocks(hex,side,index){
 					deleting.push([side, k]);
 				}
 			}
+
+			var myDiv = document.getElementById("myDiv");
+			myDiv.innerHTML = get_str_from_comb(combinations[i]);
 			break;
 		}
 	}
