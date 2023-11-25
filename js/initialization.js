@@ -5,9 +5,9 @@ function initialize(a) {
 	window.rush = 1;
 	window.lastTime = Date.now();
 	window.iframHasLoaded = false;
-	window.combinations = [["东", "方", "明", "珠"], ["人", "民", "广", "场"], ["南", "京", "路"], 
-							["黄", "埔", "江"], ["豫", "园"], ["外", "滩"], ["徐", "家", "汇"], 
-							["九", "亭", "五", "小"], ["朱", "家", "角"], ["松", "江"]];
+	window.combinations = [["浦", "东"], ["徐", "汇"], ["奉", "贤"], 
+							["闵", "行"], ["普", "陀"], ["嘉", "定"], ["宝", "山"], 
+							["黄", "浦"], ["杨", "浦"], ["松", "江"]];
 	window.colors = [];
 	var i, j;
 	for (i=0; i<combinations.length; i++) {
