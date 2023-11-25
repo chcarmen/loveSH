@@ -77,6 +77,7 @@ function consolidateBlocks(hex,side,index){
 
 			var myDiv = document.getElementById("myDiv");
 			myDiv.innerHTML = get_str_from_comb(combinations[i]);
+			setTimeout("myDiv.innerHTML=''", 2000);
 			break;
 		}
 	}
