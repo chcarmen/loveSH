@@ -571,4 +571,5 @@ body {
     top: 0%;
     overflow: auto; /* Enable scroll if needed */
     background-color:#333333;
+    background: transparent;
 }
