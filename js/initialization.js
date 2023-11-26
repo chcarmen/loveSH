@@ -5,9 +5,11 @@ function initialize(a) {
 	window.rush = 1;
 	window.lastTime = Date.now();
 	window.iframHasLoaded = false;
-	window.combinations = [["浦", "东"], ["徐", "汇"], ["奉", "贤"], 
-							["闵", "行"], ["普", "陀"], ["嘉", "定"], ["宝", "山"], 
-							["黄", "浦"], ["杨", "浦"], ["松", "江"]];
+	window.combinations = [["浦", "东"], ["徐", "汇"], ["奉", "贤"], ["闵", "行"], 
+                           ["普", "陀"], ["嘉", "定"], ["宝", "山"], ["黄", "浦"], 
+                           ["杨", "浦"], ["松", "江"], ["青", "浦"], ["虹", "口"], 
+                           ["长", "宁"], ["静", "安"], ["崇", "明"], ["金", "山"]
+                        ];
 	window.colors = [];
 	var i, j;
 	for (i=0; i<combinations.length; i++) {
